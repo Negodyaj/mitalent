@@ -420,8 +420,17 @@ header .search-controls {
   margin-right: 66px;
 }
 
+header .panel {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 400px;
+  background-color: darksalmon;
+  display: none;
+}
+
 .first-screen {
-  height: 1080px;
+  height: 100vh;
   position: relative;
 }
 
@@ -435,15 +444,18 @@ header .search-controls {
 }
 
 .first-screen .main-content {
-  width: 1800px;
-  height: 810px;
+  width: 94vw;
+  max-width: 1800px;
+  height: 75vh;
+  max-height: 810px;
   position: absolute;
   left: 0;
   bottom: 0;
 }
 
 .first-screen .slider-meta {
-  width: 480px;
+  width: 25vw;
+  max-width: 480px;
   height: 100%;
   position: relative;
 }
@@ -459,7 +471,7 @@ header .search-controls {
 }
 
 .first-screen .person-name {
-  font-size: 101px;
+  font-size: 10.5vh;
   letter-spacing: 2px;
   margin: 0;
 }
@@ -517,6 +529,12 @@ header .search-controls {
   position: absolute;
   left: 50%;
   bottom: 0;
+}
+
+.first-screen .slider-left-arrow.disabled,
+.first-screen .slider-right-arrow.disabled {
+  pointer-events: none;
+  opacity: 0.6;
 }
 
 .first-screen .slide-content {

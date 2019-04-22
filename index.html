@@ -1,13 +1,52 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,800|Poppins:400,500" rel="stylesheet">
         <link rel="stylesheet" href="./css/site.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
-    <body>
-        <header class="flex-container">
+    <body style="max-width: 1920px;">
+        <!-- это типа шапка, красивая такая -->
+        <style>
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            input[type="checkbox"]:checked + .pretty-checkbox:before {                
+                background-color: lightgreen;
+                content: '\f00c';
+            }
+
+            .pretty-checkbox {
+                display: inline;
+                position: relative;
+                padding-left: 24px;
+            }
+
+            .pretty-checkbox:before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                border: 1px solid black;
+                font-family: "Font Awesome 5 Free";
+                text-align: center;
+                line-height: 20px;
+            }
+
+        </style>
+        <section>
+            <label>
+                <input type="checkbox">
+                <span class="fa pretty-checkbox">some text</span>
+            </label>
+        </section>
+
+        <header id="header" class="flex-container">
             <div class="left-controls">
-                <button class="icon-button"><i class="fas fa-bars"></i></button>
+                <button id="bbb" class="icon-button"><i class="fas fa-bars"></i></button>
+                <div class="panel"></div>
                 <a href="#" class="link-font clients-link">CLIENTS</a>
                 <a href="#" class="link-font">NEWS</a>
             </div>
@@ -16,6 +55,7 @@
             </div>
             <div class="site-title nunito-extrabold">MITALENT</div>
         </header>
+        <!-- это типа первая секция, the best прям -->
         <section class="first-screen">
             <div class="rectangle-with-bg"></div>
             <div class="main-content flex-container">
@@ -26,14 +66,14 @@
                     </div>
                     <div class="slider-controls">
                         <ul class="slider-pages nunito-extrabold">
-                            <li class="slider-page">01</li>
+                            <li id="qq" class="slider-page">01</li>
                             <li class="slider-page active">02</li>
                             <li class="slider-page">03</li>
                             <li class="slider-page">04</li>
                         </ul>
                         <div class="slider-arrows">
-                            <i class="fas fa-long-arrow-alt-left"></i>
-                            <i class="fas fa-long-arrow-alt-right disabled"></i>
+                            <i class="fas fa-long-arrow-alt-left slider-left-arrow" onclick="doSlide(-1)"></i>
+                            <i class="fas fa-long-arrow-alt-right slider-right-arrow" onclick="doSlide(1)"></i>
                         </div>
                     </div>
                 </div>
@@ -48,5 +88,10 @@
                 </div>
             </div>
         </section>
+        <script 
+            src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            crossorigin="anonymous"></script>
+        <script src="site.js"></script>
     </body>
 </html>

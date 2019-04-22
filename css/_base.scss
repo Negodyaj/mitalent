@@ -48,4 +48,13 @@ header {
     .search-controls {
         margin-right: 66px;
     }
+
+    .panel {
+        position: absolute;
+        top: 0;
+        width: 200px;
+        height: 400px;
+        background-color: darksalmon;
+        display: none;
+    }
 }

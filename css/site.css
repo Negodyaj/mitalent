@@ -586,4 +586,52 @@ header .panel {
   letter-spacing: 2.8px;
   text-transform: uppercase;
 }
+
+.gallery-container {
+  display: -ms-grid;
+  display: grid;
+  width: 1680px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.gallery-item {
+  background-color: red;
+  height: 490px;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+.gallery-item:hover .item-inner {
+  display: block;
+}
+
+.item-inner {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 4, 9, 0.81);
+}
+
+.round-button {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #b4d3d3;
+  top: 20px;
+  right: 20px;
+}
+
+.item-info {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 34px;
+  color: white;
+}
 /*# sourceMappingURL=site.css.map */
